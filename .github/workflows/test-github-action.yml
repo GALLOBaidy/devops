@@ -33,7 +33,7 @@ jobs:
         path: |
           node_modules
           .next
-          ~/.cache/Cypress
+          /home/runner/.cache/Cypress
         key: ${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}
     - run: ls -lah
     - uses: cypress-io/github-action@v7
