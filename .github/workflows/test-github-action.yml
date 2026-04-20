@@ -1,12 +1,18 @@
 on: push
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
       - run: npm install
       - run: npm run build
-      - run: npm run e2e
 
-
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: cypress-io/github-actions@v7
+        with:
+          start: npm run start
+          build: npm run build
