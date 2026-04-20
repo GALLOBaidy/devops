@@ -12,6 +12,6 @@ jobs:
         with:
           path: 
             node_modules
-            .nzxt
+            .next
           key: ${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}
 
