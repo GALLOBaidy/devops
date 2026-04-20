@@ -20,13 +20,13 @@ jobs:
     needs: build
     steps:
       - uses: actions/checkout@v6
-      - name: Restauration du cache.
-        uses: actions/cache/restore@v5
+      - name: Restauration du cache
+        uses: actions/cache/@v4
         with:
           path: |
             node_modules
             .next
-            /home/runner/work/_actions/cypress-io/github-action/v7/dist/index.js
+            ~/.cache/Cypress
           key: ${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}
       - run: ls -lah
       - uses: cypress-io/github-action@v7
