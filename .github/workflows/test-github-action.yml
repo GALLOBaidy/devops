@@ -10,7 +10,7 @@ jobs:
       - name: Sauvegarde du cache.
         uses: actions/cache/save@v5
         with:
-          path: 
+          path: |
             node_modules
             .next
           key: ${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}
