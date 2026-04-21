@@ -12,12 +12,12 @@ export default function Home() {
 
         <p className={styles.description}>
           Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
+          <code className={styles.code}>pages/index.tsx</code>
         </p>
 
         <div className={styles.grid}>
           <Link href="/about" className={styles.card}>
-            <h2>About Page &rarr;</h2>
+            <h2>About Page next &rarr;</h2>
             <p>Cypress will test if this link is working.</p>
           </Link>
 
